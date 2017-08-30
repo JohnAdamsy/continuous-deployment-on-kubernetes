@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: jenkins:2.7.2
+        image: jenkins:latest
         ports:
         - containerPort: 8080
         - containerPort: 50000
@@ -60,4 +60,6 @@ spec:
           pdName: jenkins-home
           fsType: ext4
           partition: 1
+      #nodeSelector:
+       # alias: three
 # [END jenkins_deployment]
